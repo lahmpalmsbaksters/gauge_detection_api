@@ -37,7 +37,7 @@ def process_image(file_content: bytes):
 # Calculate the center of the image
     height, width = resized_img.shape[:2]
     center_x = width // 2
-    center_y = height // 2 + 100
+    center_y = height // 2
 
     # Iterate through the detected lines
     for line in lines:

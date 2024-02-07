@@ -104,8 +104,8 @@ def process_image(file_content: bytes):
             position_text = 'Left'
 
         # Display the position information
-        cv2.putText(resized_img, f'Position: {position_text}', (
-            10, 120), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2, cv2.LINE_AA)
+        # cv2.putText(resized_img, f'Position: {position_text}', (
+        #     10, 120), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2, cv2.LINE_AA)
 
         # Calculate the angle between the blue line and the horizontal reference line
         angle_blue = np.arctan2(y2 - y1, x2 - x1) * (180 / np.pi)
@@ -163,8 +163,8 @@ def process_image(file_content: bytes):
                     np.abs(np.arctan2(y2 - y1, x2 - x1) * (180 / np.pi))
 
         # Display the quadrant information
-        cv2.putText(resized_img, f'Quadrant: {quadrant_text}', (
-            10, 180), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 255), 2, cv2.LINE_AA)
+        # cv2.putText(resized_img, f'Quadrant: {quadrant_text}', (
+        #     10, 180), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 255), 2, cv2.LINE_AA)
 
         cv2.putText(resized_img, f'Angle Blue: {angle_blue:.2f} degrees', (
             10, 60), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2, cv2.LINE_AA)
